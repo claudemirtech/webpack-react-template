@@ -1,8 +1,8 @@
-import {Button, Container, Table} from "reactstrap";
-import {AppNavBar} from "../component/AppNavBar";
-import {UsuarioList} from "../component/UsuarioList";
-import {Link} from "react-router-dom";
-import "../style/UsuarioList.css"
+import {Button, Container, Table} from 'reactstrap';
+import {AppNavBar} from '../component/AppNavBar';
+import {UsuarioList} from '../component/UsuarioList';
+import {Link} from 'react-router-dom';
+import '../style/UsuarioList.css'
 
 export const Usuario = () => (
     <div>

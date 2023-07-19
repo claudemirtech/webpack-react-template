@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
-axios.defaults.headers.common["Content-Type"] = "application/json";
-axios.defaults.headers.common["Authorization"] = `Bearer ${localStorage.getItem("userToken")}`;
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('userToken')}`;
 
-const BASE_URL = "/api/usuario"
+const BASE_URL = '/api/usuario'
 export class UsuarioService {
 
     static getUsuarios() {

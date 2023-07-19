@@ -6,17 +6,17 @@ module.exports = (express) => {
 
     const router = express.Router();
 
-    router.route("/login").post(async (req, res, next) => {
+    router.route('/login').post(async (req, res, next) => {
         const { email, senha } = req.body;
         let existingUser;
         try {
             existingUser = await Usuario.findOne({ where: { email: email } });
         } catch {
-            const error = new Error("Error! Something went wrong.");
+            const error = new Error('Error! Something went wrong.');
             return next(error);
         }
         if (!existingUser || existingUser.senha !== hashPassword(senha)) {
-            const error = Error("Wrong details please check at once");
+            const error = Error('Wrong details please check at once');
             return next(error);
         }
         let token;
@@ -24,12 +24,12 @@ module.exports = (express) => {
             //Creating jwt token
             token = jwt.sign(
                 { userId: existingUser.cdusuario, email: existingUser.email },
-                "secretkeyappearshere",
-                // { expiresIn: "1h" }
+                'secretkeyappearshere',
+                // { expiresIn: '1h' }
             );
         } catch (err) {
             console.log(err);
-            const error = new Error("Error! Something went wrong.");
+            const error = new Error('Error! Something went wrong.');
             return next(error);
         }
 

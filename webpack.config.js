@@ -44,7 +44,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: "./frontend/public", to: "public" },
+                { from: './frontend/public', to: 'public' },
         ]}),
     ],
     devServer: {

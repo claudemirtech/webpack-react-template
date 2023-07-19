@@ -1,6 +1,6 @@
 # webpack-react-template
 
-# React application with Express server
+## React application with Express server
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). Then an Express server was added in the `backend` directory.
 
@@ -20,7 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    touch .env
    ```
    | Key     | Value     |
-      |---------|-----------|
+   |---------|-----------|
    | PORT    | 3000      |
    | HOST    | 0.0.0.0   |
    | DB_HOST | localhost |
@@ -40,4 +40,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    ```bash
    node backend
    ```
-   Both React application and server will run on port defined port.
+   Both React application and server will run on defined port.

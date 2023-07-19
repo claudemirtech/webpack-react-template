@@ -1,5 +1,5 @@
-const { Usuario } = require('../model/Usuario.js');
-const { hashPassword } = require("../util/SenhaUtil");
+const { Usuario } = require('../model/Usuario');
+const { hashPassword } = require('../util/SenhaUtil');
 
 exports.getUsuarios = async () => {
     return await Usuario.findAll();
