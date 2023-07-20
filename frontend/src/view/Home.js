@@ -1,4 +1,4 @@
-import {AppNavBar} from "../component/AppNavBar";
+import {AppNavBar} from '../component/AppNavBar';
 
 export const Home = () => {
 

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import {
     Collapse,
     DropdownItem,
@@ -11,10 +11,10 @@ import {
     NavItem,
     NavLink,
     UncontrolledDropdown
-} from "reactstrap";
-import {Link} from "react-router-dom";
-import logo from "../logo.svg";
-import "../style/AppNavBar.css";
+} from 'reactstrap';
+import {Link} from 'react-router-dom';
+import logo from '../logo.svg';
+import '../style/AppNavBar.css';
 
 export const AppNavBar = () => {
     const [isOpen, setIsOpen] = useState(false);

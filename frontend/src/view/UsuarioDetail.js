@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { AppNavBar } from "../component/AppNavBar";
-import { Button, Container, Form, FormGroup, Input, Label } from "reactstrap";
-import { UsuarioService } from "../service/UsuarioService";
+import { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { AppNavBar } from '../component/AppNavBar';
+import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
+import { UsuarioService } from '../service/UsuarioService';
 
 export const UsuarioDetail = () => {
     const navigate = useNavigate();
     const { cdusuario } = useParams();
     const [usuario, setUsuario] = useState({
-        nome: "",
-        email: "",
-        senha: "",
+        nome: '',
+        email: '',
+        senha: '',
         ativo: true
     });
 
@@ -31,13 +31,13 @@ export const UsuarioDetail = () => {
         } else {
             await UsuarioService.salvar(usuario);
         }
-        navigate("/usuarios");
+        navigate('/usuarios');
     }
 
     const fetchUsuario = async (id) => {
-        if (id !== "new") {
+        if (id !== 'new') {
             const { data } = await UsuarioService.getUsuario(id);
-            data.senha = "";
+            data.senha = '';
             setUsuario(data);
         }
     }

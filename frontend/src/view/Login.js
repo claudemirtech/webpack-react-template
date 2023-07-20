@@ -1,16 +1,16 @@
-import {Alert, Button, Form, FormGroup, Input, Label} from "reactstrap";
-import {LoginService} from "../service/LoginService";
-import {useNavigate} from "react-router-dom";
-import {useState} from "react";
-import "../style/Login.css";
+import {Alert, Button, Form, FormGroup, Input, Label} from 'reactstrap';
+import {useNavigate} from 'react-router-dom';
+import {LoginService} from '../service/LoginService';
+import {useState} from 'react';
+import '../style/Login.css';
 
 export const Login = () => {
     const navigate = useNavigate();
     const [usuario, setUsuario] = useState({
-        email: "",
-        senha: ""
+        email: '',
+        senha: ''
     });
-    const [textMessage, setTextMessage] = useState("");
+    const [textMessage, setTextMessage] = useState('');
 
     const fetchUser = async (usuario) => {
         const {data} = await LoginService.autenticar(usuario);
@@ -25,9 +25,9 @@ export const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         fetchUser(usuario).then(() => {
-            navigate("/");
+            navigate('/');
         }).catch(() => {
-            setTextMessage("Usuário ou senha incorretos");
+            setTextMessage('Usuário ou senha incorretos');
         });
     }
 

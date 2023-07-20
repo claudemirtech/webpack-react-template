@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { UsuarioService } from "../service/UsuarioService";
-import { Button, ButtonGroup } from "reactstrap";
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { UsuarioService } from '../service/UsuarioService';
+import { Button, ButtonGroup } from 'reactstrap';
 
 export const UsuarioList = () => {
     const [usuarios, setUsuarios] = useState([]);
